@@ -3,7 +3,8 @@
   width: 100%;
 
   .navbar{
-    position: fixed;
+    position: sticky;
+    top: 0px;
   }
 
   .main {
