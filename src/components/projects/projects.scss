@@ -1,0 +1,130 @@
+@import "../../global.scss";
+
+.projects {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: lightgray;
+
+  h1 {
+    color: black;
+    position: absolute;
+    top: 17.5px;
+    font-size: 45px;
+
+    @include tablet {
+      font-size: 40px;
+    }
+    @include phone {
+      font-size: 35px;
+    }
+  }
+
+  ul {
+    margin: 7.5px;
+    padding: 1px;
+    list-style: none;
+    display: flex;
+    margin-bottom: 2.5vh;
+    margin-top: 40px;
+
+    .projectList {
+      margin: 10px 30px;
+      margin-top: 30px;
+      font-size: 20px;
+      padding: 10px;
+      color: black;
+
+      @include tablet {
+        margin: 5px 5px;
+        font-size: 17.5px;
+      }
+
+      @include phone {
+        margin: 0px;
+        font-size: 12.5px;
+        font-weight: 400;
+      }
+    }
+
+    .projectList:hover {
+      background-color: #87cefa78;
+    }
+
+    .projectList.active {
+      background-color: $mainColor;
+      color: white;
+    }
+  }
+
+  .container {
+    display: flex;
+    background-color: rgb(190, 188, 188);
+    width: 70%;
+    height: 70%;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    overflow-x: hidden;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 10px;
+      height: 225px;
+      padding: 0px 15px;
+      background-color: white;
+      border-radius: 5px;
+      border: solid 5px black;
+
+      @include onlyTablet {
+        height: 250px;
+      }
+
+      @include phone {
+        height: 150px;
+      }
+
+      .top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+
+        img {
+          border: 2.5px solid black;
+          border-radius: 5px;
+          width: 150px;
+          height: 150px;
+
+          @include phone {
+            width: 75px;
+            height: 75px;
+          }
+        }
+      }
+
+      .bottom {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 5px;
+        border-radius: 5px;
+        color: black;
+        border: 2.5px solid black;
+        list-style: none;
+
+        @include phone {
+          font-size: 12.5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+$mainColor: #87cefa;
+$mainColorDark: #449cd4;
+
+$width: 821px;
+@mixin onlyFullScreen {
+  @media (min-width: #{$width}) {
+    @content;
+  }
+}
+
+$tabletWidth: 820px;
+@mixin tablet {
+  @media (max-width: #{$tabletWidth}) {
+    @content;
+  }
+}
+
+$tabletWidthMax: 820px;
+$tabletWidthMin: 426px;
+@mixin onlyTablet {
+  @media (max-width: #{$tabletWidthMax}) and (min-width: #{$tabletWidthMin}) {
+    @content;
+  }
+}
+
+$phoneWidth: 425px;
+@mixin phone {
+  @media (max-width: #{$phoneWidth}) {
+    @content;
+  }
+}

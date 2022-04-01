@@ -1,0 +1,121 @@
+@import "../../global.scss";
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .container {
+    width: 80vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .top {
+      position: absolute;
+      top: 5vh;
+      display: flex;
+      font-size: 35px;
+      font-weight: 500;
+
+      h2 {
+        font-size: 40px;
+
+        @include onlyTablet {
+          font-size: 30px;
+        }
+
+        @include phone {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .mid {
+      position: absolute;
+      top: 11vh;
+      display: flex;
+      font-size: 35px;
+      font-weight: 500;
+
+      @include onlyFullScreen {
+        top: 15vh;
+      }
+
+      h2 {
+        font-size: 40px;
+
+        @include onlyTablet {
+          font-size: 30px;
+        }
+
+        @include phone {
+          font-size: 20px;
+        }
+
+        span {
+          font-size: inherit;
+          color: black;
+        }
+        .ityped-cursor {
+          animation: blink 1s infinite;
+          font-size: 40px;
+        }
+        @keyframes blink {
+          60% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      position: absolute;
+      bottom: 0px;
+
+      button {
+        font-size: 17.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: Transparent;
+        border: 2px solid black;
+        padding: 10px 10px;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          color: inherit;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
+        img {
+          height: 25px;
+          transition: 500ms ease all;
+          padding-left: 5px;
+        }
+      }
+
+      button:hover {
+        background-color: $mainColorDark;
+
+        img {
+          transform: rotate(90deg);
+          transition: 750ms ease all;
+        }
+      }
+    }
+  }
+}

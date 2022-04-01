@@ -1,0 +1,17 @@
+.about {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  position: relative;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .container {
+    position: absolute;
+    background-color: lightgray;
+    height: calc(100vh - 50px);
+    width: 100vw;
+  }
+}

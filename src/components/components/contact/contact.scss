@@ -1,0 +1,255 @@
+@import "../../global.scss";
+
+.contact {
+  display: flex;
+  background-color: white;
+  position: relative;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .header {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    height: 10vh;
+    width: 100vw;
+
+    h1 {
+      font-size: 45px;
+      margin-top: 2vh;
+    }
+  }
+
+  .top {
+    display: flex;
+    position: absolute;
+    height: 67.5vh;
+    width: 90vw;
+    top: 12.5%;
+    left: 5%;
+    overflow: hidden;
+
+    @include tablet {
+      height: 80%;
+    }
+
+    .left {
+      display: flex;
+      position: inherit;
+      height: 60vh;
+      width: 50vw;
+      top: 2%;
+      left: 2%;
+
+      @include tablet {
+        height: 40vh;
+        width: 86.5vw;
+        top: 2%;
+        left: 2%;
+      }
+    }
+
+    .right {
+      display: flex;
+      position: inherit;
+      height: 60vh;
+      width: 35vw;
+      top: 2%;
+      left: 59%;
+      justify-content: center;
+      background-color: lightgray;
+      border-radius: 5px;
+
+      @include tablet {
+        height: 21.5vh;
+        width: 86.5vw;
+        top: 62.5%;
+        left: 2%;
+      }
+
+      h2 {
+        position: absolute;
+        display: flex;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        left: 15%;
+        font-size: 20px;
+        margin-top: 1vh;
+
+        @include onlyTablet {
+          font-size: 13px;
+        }
+
+        @include phone {
+          font-size: 10px;
+        }
+      }
+
+      form {
+        display: flex;
+        position: absolute;
+        width: 34vw;
+        height: 51vh;
+        left: 1.4%;
+        top: 10%;
+        align-items: center;
+        overflow: hidden;
+
+        @include onlyFullScreen {
+          justify-content: center;
+        }
+
+        @include tablet {
+          width: 84vw;
+          height: 17.5vh;
+        }
+
+        .form_top {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: space-between;
+          position: absolute;
+          top: 1vh;
+          align-items: center;
+          justify-content: center;
+
+          @include onlyFullScreen {
+            margin-top: 1vh;
+          }
+
+          @include tablet {
+            flex-direction: row;
+          }
+
+          input {
+            display: flex;
+            margin-top: 1.25vh;
+            margin-bottom: 1vh;
+            width: 30vw;
+            height: 3.5vh;
+            border: 0;
+            border-radius: 5px;
+
+            @include tablet {
+              width: 25vw;
+              margin-right: 1.25vw;
+              height: 3vh;
+            }
+          }
+        }
+
+        .form_bottom {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 18.5vh;
+
+          @include onlyFullScreen {
+            height: 35vh;
+          }
+
+          @include tablet {
+            top: 6vh;
+            flex-direction: row;
+            width: 90vw;
+            height: 12.5vh;
+          }
+
+          textarea {
+            display: flex;
+            margin-top: 3vh;
+            width: 30vw;
+            height: 20vh;
+            resize: none;
+            border: 0;
+            border-radius: 5px;
+
+            @include tablet {
+              height: 10vh;
+              width: 65vw;
+              margin-right: 7.5vw;
+              margin-top: 1.5vh;
+              height: 9.5vh;
+            }
+          }
+
+          button {
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            width: 30.25vw;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            border-radius: 15px;
+            background-color: $mainColor;
+            color: black;
+            font-weight: 500;
+            font-size: 15px;
+            border: 3px solid $mainColorDark;
+
+            @include onlyFullScreen {
+              top: 25vh;
+            }
+
+            @include tablet {
+              height: 7.5vh;
+              top: 2.5vh;
+              left: 68vw;
+              width: 12.5vw;
+            }
+          }
+
+          button:hover {
+            background-color: $mainColorDark;
+          }
+        }
+      }
+    }
+
+    .up {
+      display: flex;
+      position: absolute;
+      left: calc(45vw - 25px);
+      bottom: -2%;
+      height: 60px;
+      width: 60px;
+      z-index: 2;
+
+      @include tablet {
+        bottom: -0.25%;
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    position: absolute;
+    height: 10vh;
+    width: 40vw;
+    top: 87.5%;
+    left: 30.15vw;
+    justify-content: space-around;
+    align-items: center;
+
+    @include tablet {
+      top: 90%;
+      height: 8vh;
+    }
+
+    img {
+      border: 1px solid black;
+      border-radius: 2.5px;
+      padding: 2px;
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
