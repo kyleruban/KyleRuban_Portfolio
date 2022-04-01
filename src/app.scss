@@ -2,13 +2,6 @@
   height: 100vh;
   width: 100%;
 
-  .navbar{
-    position: sticky;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
   .main {
     width: 100%;
     height: calc(100vh - 75px);
