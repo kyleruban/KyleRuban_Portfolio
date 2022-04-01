@@ -4,7 +4,9 @@
 
   .navbar{
     position: sticky;
-    top: 0px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .main {
@@ -12,7 +14,7 @@
     height: calc(100vh - 75px);
     background-color: lightskyblue;
     position: relative;
-    top: 75px;
+    top: 0px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
