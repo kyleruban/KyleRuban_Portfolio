@@ -1,8 +1,8 @@
 import React from 'react';
 import './marker.scss';
 
-const Marker = (props: any) => {
-    const { color, name, id } = props;
+const Marker = (props) => {
+    const { color, name } = props;
     return (
       <div className="marker"
         style={{ backgroundColor: color, cursor: 'pointer'}}
