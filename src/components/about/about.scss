@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
+  height: 100vh;
   position: relative;
   &::-webkit-scrollbar {
     display: none;
@@ -13,5 +14,35 @@
     background-color: lightgray;
     height: calc(100vh - 50px);
     width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title{
+      display: flex;
+      height: 10%;
+      width: 75%;
+      justify-content: center;
+      align-items: center;
+
+      h1{
+        font-size: 45px;
+      }
+    }
+
+    .top{
+      display: flex;
+      height: 40%;
+      width: 75%;
+      justify-content: center;
+    }
+
+    .bottom{
+      display: flex;
+      height: 40%;
+      width: 75%;
+      justify-content: center;
+    }
   }
 }

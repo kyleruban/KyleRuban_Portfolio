@@ -4,7 +4,15 @@ function About() {
   return (
     <div className='about' id='about'>
         <div className='container'>
-            About Container
+          <div className='title'>
+            <h1>About Me</h1>
+          </div>
+          <div className='top'>
+            Top
+          </div>
+          <div className='bottom'>
+            Bottom
+          </div>
         </div>
     </div>
   )
